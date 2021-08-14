@@ -1,0 +1,152 @@
+/** header style start **/
+.icon-css{
+    color: #fff;
+    font-size: 30px;
+}
+
+.right-account{
+    position: absolute;
+    right: 0px;
+}
+.badge {
+    font-size: 0.55em !important;
+    top: 17%;
+}
+.account-css{
+    color: #fff;
+}
+/** header style end **/
+/** conversion style start **/
+.container-class{
+    margin-top: 10px;
+}
+.heading{
+    font-size: 20px;
+    color: #4E4E5A;
+    font-weight: bold;
+}
+.next-text{
+    font-size: 13px;
+}
+/** single circle css **/
+.single-circle{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+/** two circle css **/
+.two-circle-left{
+    width: 55%;
+    height: 55%;
+    border-radius: 50%;
+    text-align:start;
+    float:left;
+    margin: 0px;
+}
+.two-circle-right{
+    width: 55%;
+    height: 55%;
+    border-radius: 40%;
+    text-align: end;
+    float: right;
+    margin-top: 50%;
+    margin: 0px;
+}
+/** three circle css **/
+.three-circle-left{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    text-align:start;
+    float:left;
+    margin: 0px;
+}
+.three-circle-right{
+    width: 50%;
+    height: 50%;
+    border-radius: 40%;
+    text-align: end;
+    float: right;
+    margin: 0px;
+}
+.three-circle-center{
+    width: 50%;
+    height: 50%;
+    border-radius: 40%;
+    margin-top: 50%;
+    margin: 0px;
+    margin-left: 30%;
+}
+/** four circle css **/
+.four-circle-top-left{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    text-align:start;
+    float:left;
+    margin: 0px;
+}
+.four-circle-top-right{
+    width: 50%;
+    height: 50%;
+    border-radius: 40%;
+    text-align: end;
+    float: right;
+    margin: 0px;
+}
+.four-circle-bottom-left{
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    text-align:start;
+    float:left;
+    margin-top: 50%;
+    margin: 0px;
+}
+.four-circle-bottom-right{
+    width: 50%;
+    height: 50%;
+    border-radius: 40%;
+    text-align: end;
+    float: right;
+    margin-top: 50%;
+    margin-left: 50%;
+    margin: 0px;
+}
+
+.read-title{
+    font-size: 14px;
+    color: #4E4E5A;
+}
+.unread-title{
+    font-size: 14px;
+    color: #292931;
+    font-weight: bold;
+}
+.read-desc{
+    font-size: 14px;
+    color: #8D8DA2;
+}
+.unread-desc{
+    font-size: 14px;
+    color: #292931;
+    font-weight: bold;
+}
+.read-time{
+    font-size: 10px;
+    color: #8D8DA2;
+}
+.unread-time{
+    font-size: 10px;
+    color: #292931;
+}
+.fixed-height{
+    min-height: 100%;
+    height: 430px;
+    width: 100%;
+    position: relative;
+    overflow-y: scroll;
+    padding: 10px 10px;
+}
+::-webkit-scrollbar{width:2px;border-left:1px solid #E6ECF8;}
+::-webkit-scrollbar-thumb{background-color:#292931;}

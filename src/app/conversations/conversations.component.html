@@ -1,0 +1,110 @@
+<!-- tab start -->
+<header>
+    <nav class="navbar navbar-black bg-black">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2 col-2 p-2 me-3"> 
+                    <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasWithBackdrop" aria-expanded="false">
+                        <i class="las la-bars icon-css"></i>
+                    </a>
+                </div>
+                <div class="col-sm-2 col-2 p-2 me-3"> 
+                    <a role="button" class="">
+                        <i class="lab la-angular icon-css"></i>
+                    </a>
+                </div>
+                <div class=" col-sm-5 col-5 p-2"> 
+                    <a role="button" class="text-center">
+                        <i class="las la-search icon-css"></i>
+                    </a>
+                </div>
+                <div class="col-sm-3 col-3 text-center right-account"> 
+                    <a role="button" class="text-center" style="text-decoration: none;">
+                        <i class="las la-user-alt icon-css"></i>
+                        <span class="position-absolute translate-middle badge rounded-pill bg-danger">1</span>
+                        <br><span class="account-css">Account</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+      </nav>
+
+    
+</header>
+  <!-- header end -->
+  
+<div class="container-fluid container-class">
+    <div class="row ">
+        <div class=" col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="card ">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-7 text-left">
+                            <h4 class="heading">Conversations</h4>
+                        </div>
+                        <div class="col-5 text-right">
+                            <button type="button" class="btn btn-success mb-3" >
+                                <div class="next-text text-right">&nbsp;<i class="las la-comments"></i>
+                                    New Chat</div>
+                            </button>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush fixed-height">
+                        <li class="list-group-item" *ngFor="let item of conversationsList">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="row">
+                                    <div class="col-3 col-lg-2 ">
+                                        <!-- if imagearray length 0 -->
+                                        <img *ngIf="item.image.length==1" src="assets/img/user.png" class="single-circle" alt="...">
+                                        <!-- if imagearray length 1 -->
+                                        <img *ngIf="item.image.length==0" src="assets/img/user.png" class="single-circle" alt="...">
+                                        <!-- if imagearray length 2 -->
+                                        <img *ngIf="item.image.length==2" src="assets/img/user.png" class="two-circle-left" alt="...">
+                                        <img *ngIf="item.image.length==2" src="assets/img/user.png" class="two-circle-right" alt="...">
+                                        <!-- if imagearray length 3 -->
+                                        <img *ngIf="item.image.length==3" src="assets/img/user.png" class="three-circle-left" alt="...">
+                                        <img *ngIf="item.image.length==3" src="assets/img/user.png" class="three-circle-right" alt="...">
+                                        <img *ngIf="item.image.length==3" src="assets/img/user.png" class="three-circle-center" alt="...">
+                                        <!-- if imagearray length 4 -->
+                                        <img *ngIf="item.image.length==4" src="assets/img/user.png" class="four-circle-top-left" alt="...">
+                                        <img *ngIf="item.image.length==4" src="assets/img/user.png" class="four-circle-top-right" alt="...">
+                                        <img *ngIf="item.image.length==4" src="assets/img/user.png" class="four-circle-bottom-left" alt="...">
+                                        <img *ngIf="item.image.length==4" src="assets/img/user.png" class="four-circle-bottom-right" alt="...">
+                                    </div>
+                                    <div class="col-9 col-lg-10">
+                                        <div class="row">
+                                            <div class="col-9 col-lg-5">
+                                                <p [class.unread-title]="item.chat_status==0" [class.read-title]="item.chat_status==1" class="m-0 text-left">
+                                                        {{item.title | slice:0:20}}
+                                                </p>
+                                            </div>
+                                            <div class="col-3 col-lg-7 text-right">
+                                                <p [class.unread-time]="item.chat_status==0" [class.read-time]="item.chat_status==1" class="m-0 text-right">
+                                                    {{item.time}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-lg-3">
+                                                <p style="flex:1;" [class.unread-desc]="item.chat_status==0" [class.read-desc]="item.chat_status==1" class="m-0 text-left">
+                                                    <span *ngIf="item.description.length>20">
+                                                        {{item.description | slice:0:25}}...
+                                                    </span>
+                                                    <span *ngIf="item.description.length<=20">
+                                                        {{item.description}}
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+        </div>
+    </div> 
+</div> 
+
+<app-sidemenu ></app-sidemenu>

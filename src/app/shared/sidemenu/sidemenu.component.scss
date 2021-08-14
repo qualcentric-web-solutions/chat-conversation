@@ -1,0 +1,47 @@
+.offcanvas-start{
+    width: auto;
+    background-color: #fff;
+    opacity:100%;
+}
+body {
+    padding-top: 55px;
+}
+h5 {
+    margin: 0px 0px 0px !important;
+}
+.navbar-nav .nav-link {
+    color:#504F4C;
+    font-size: 13px;
+}
+.navbar-nav .active {
+    color:#CBB06D !important;
+    font-size: 14px;
+}
+
+/* mobile navbar sidebar under lg breakpoint */
+@media (max-width: 992px) { 
+    .navbar-collapse.collapsing .navbar-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -45%;
+        transition: all 0.2s ease;
+    }
+
+    .navbar-collapse.show .navbar-nav {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        flex-direction: column;
+        height: auto;
+        width: 45%;
+        transition: left 0.35s ease;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+    
+}
+.myClass{
+    overflow: unset;
+}
